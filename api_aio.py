@@ -104,6 +104,11 @@ async def get_health(request):
     return web.HTTPOk()
 
 
+@routes.get("/health/")
+async def get_health(request):
+    return web.HTTPOk()
+
+
 @routes.get('/nation/mois')
 async def get_nation(request):
     async with request.app["csession"].get(
